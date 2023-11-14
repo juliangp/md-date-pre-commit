@@ -9,5 +9,5 @@ repos:
     hooks:
       - id: check-last-updated
         stages: [ commit ]
-        args: [ "egrep", "machine-learning.md|machine-learning-cp.md" ]
+        args: [ "machine-learning.md|machine-learning-cp.md" ]
 ```
