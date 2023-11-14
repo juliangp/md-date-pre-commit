@@ -1,0 +1,5 @@
+- id: check-last-updated
+  name: Check last updated date
+  entry: check-lastupdated.sh
+  language: 'script'
+  description: This hook checks that the last updated date matches todays date. The `args` can be used to filter certain files.
