@@ -4,7 +4,7 @@
 # set -x
 
 today=$(date +"%Y-%m-%d")
-files=$(git diff --name-only | egrep "machine-learning.md|machine-learning-cp.md")
+files=$(echo $* | egrep '*.md')
 
 function validate_lastupdated() {
   cat $1 | grep lastupdated | awk '{print $2; exit}' | tr -d '"'

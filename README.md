@@ -1,6 +1,6 @@
 # md-date-pre-commit
 
-This is used like this:
+This is used to check dates in `.md` files like this:
 
 ```yaml
 repos:
@@ -9,5 +9,4 @@ repos:
     hooks:
       - id: check-last-updated
         stages: [ commit ]
-        args: [ "machine-learning.md|machine-learning-cp.md" ]
 ```
