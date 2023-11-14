@@ -3,14 +3,8 @@
 # turn on echo
 # set -x
 
-# matching_files="machine-learning.md|machine-learning-cp.md"
-matching_files="$*"
-if [[ "${matching_files}" == "" ]]; then
-  matching_files="*.md"
-fi
-
 today=$(date +"%Y-%m-%d")
-files=$(git diff --name-only | egrep ${matching_files})
+files=$(git diff --name-only | egrep "machine-learning.md|machine-learning-cp.md")
 
 function validate_lastupdated() {
   cat $1 | grep lastupdated | awk '{print $2; exit}' | tr -d '"'
