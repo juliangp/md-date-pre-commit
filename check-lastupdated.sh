@@ -4,7 +4,7 @@
 # set -x
 
 today=$(date +"%Y-%m-%d")
-files=$(echo $* | xargs -n1 | egrep "machine-learning-cp.md|machine-learning.md" | tr '\n' ' ')
+files=$(echo $* | xargs -n1 | egrep "machine-learning-cp.md|machine-learning.md|watsonx-ai.md|watsonx-ai-cp.md" | tr '\n' ' ')
 
 function validate_lastupdated() {
   cat $1 | grep lastupdated | awk '{print $2; exit}' | tr -d '"'
