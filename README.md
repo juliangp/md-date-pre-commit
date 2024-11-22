@@ -8,5 +8,5 @@ repos:
     rev: v1.0.0
     hooks:
       - id: check-last-updated
-        stages: [ commit ]
+        stages: [ pre-commit ]
 ```
